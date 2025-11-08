@@ -1,6 +1,7 @@
 #include<iostream>
 using namespace std;
 
+// dp memoisation
 int maxProfit(int index, vector<vector<int>> &jobs){
     if(index == jobs.size()){
         return 0;
@@ -26,7 +27,6 @@ int maxProfit(int index, vector<vector<int>> &jobs){
     return jobs[index][2];
 }
 int maxProfit(vector<vector<int>> &jobs) {
-    // code here
     sort(jobs.begin(), jobs.end());
     return maxProfit(0, jobs);
 }
